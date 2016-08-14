@@ -1,0 +1,17 @@
+<?php
+
+namespace SimpleRestAuth;
+
+use Psr\Http\Message\ServerRequestInterface;
+
+
+/**
+ *
+ * @author mickael
+ */
+interface IUserService {
+    
+    public function findUserByFilters(ServerRequestInterface $request);
+    
+    public function generateToken();
+}
