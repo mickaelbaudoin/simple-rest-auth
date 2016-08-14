@@ -37,8 +37,8 @@ class AuthentificationMidleware {
     
     protected function findUser(ServerRequestInterface $request){
         $user = $this->userService->findUserByFilters($request);
-        if($user instanceof \Lib\Auth\IUser){  
-            $user->setToken($this->userService->generateToken());
+        if($user instanceof IUser){  
+            $user->setToken($this->userService->generateToken($user));
             return $user;
         }
         

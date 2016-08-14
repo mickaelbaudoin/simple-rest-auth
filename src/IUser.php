@@ -32,4 +32,6 @@ interface IUser {
      * @return array Authorization\IGroup
      */
     public function getGroups();
+    
+    public function setToken($token);
 }
