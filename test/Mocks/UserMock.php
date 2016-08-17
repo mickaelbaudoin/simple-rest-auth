@@ -1,8 +1,8 @@
 <?php
 
-namespace SimpleRestAuthTest\Mocks;
+namespace MB\SimpleRestAuthTest\Mocks;
 
-class UserMock implements \SimpleRestAuth\IUser{
+class UserMock implements \MB\SimpleRestAuth\IUser{
     
     public function getGroups() {
         return [];

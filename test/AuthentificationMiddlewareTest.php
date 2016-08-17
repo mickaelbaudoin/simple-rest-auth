@@ -1,6 +1,6 @@
 <?php
 
-namespace SimpleRestAuthTest;
+namespace MB\SimpleRestAuthTest;
 
 use PHPUnit\Framework\TestCase;
 
@@ -16,7 +16,7 @@ class AuthentificationMiddlewareTest extends TestCase{
         $callback = function() use ($response) {return $response;};
         
         $userService = new Mocks\UserServiceMock();
-        $middleware = new \SimpleRestAuth\AuthentificationMidleware($userService);
+        $middleware = new \MB\SimpleRestAuth\AuthentificationMidleware($userService);
         $reponseServer = $middleware($request,$response,$callback);
         
         $this->assertEquals(200, $reponseServer->getStatusCode());
@@ -32,7 +32,7 @@ class AuthentificationMiddlewareTest extends TestCase{
         $callback = function() use ($response) {return $response;};
         
         $userService = new Mocks\UserServiceMock();
-        $middleware = new \SimpleRestAuth\AuthentificationMidleware($userService);
+        $middleware = new \MB\SimpleRestAuth\AuthentificationMidleware($userService);
         $reponseServer = $middleware($request,$response,$callback);
         
         $this->assertEquals(401, $reponseServer->getStatusCode());

@@ -1,8 +1,8 @@
 <?php
 
-namespace SimpleRestAuthTest\Mocks;
+namespace MB\SimpleRestAuthTest\Mocks;
 
-class UserServiceMock implements \SimpleRestAuth\IUserService{
+class UserServiceMock implements \MB\SimpleRestAuth\IUserService{
     
     private $login = "test";
     private $password = "123456";
@@ -12,13 +12,13 @@ class UserServiceMock implements \SimpleRestAuth\IUserService{
         $password = $request->getAttribute('password');
         
         if($login == $this->login && $password == $this->password){
-            $user = new \SimpleRestAuthTest\Mocks\UserMock();
+            $user = new \MB\SimpleRestAuthTest\Mocks\UserMock();
             return $user;
         }
         return null;
     }
 
-    public function generateToken(\SimpleRestAuth\IUser $user) {
+    public function generateToken(\MB\SimpleRestAuth\IUser $user) {
         return $user;
     }
 

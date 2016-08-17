@@ -11,19 +11,19 @@
         }
     ],
     "require": {
-        "php": "^5.5"
+        "php": ">=5.5"
     },
     "require-dev": {
         "guzzlehttp/guzzle" : "6.2.1"
     },
     "autoload": {
         "psr-4": {
-            "SimpleRestAuth\\": "src/"
+            "MB\\SimpleRestAuth\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SimpleRestAuthTest\\": "test/"
+            "MB\\SimpleRestAuthTest\\": "test/"
         }
     }
 }

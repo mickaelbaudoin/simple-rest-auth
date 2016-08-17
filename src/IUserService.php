@@ -1,6 +1,6 @@
 <?php
 
-namespace SimpleRestAuth;
+namespace MB\SimpleRestAuth;
 
 use Psr\Http\Message\ServerRequestInterface;
 
