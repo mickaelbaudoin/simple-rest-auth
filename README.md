@@ -94,7 +94,7 @@ use Zend\Expressive\Helper;
 return [
         // Map middleware -> factories here
         'factories' => [
-            'MB\AuthorizationMiddleware' => 'Foo\Factories\RestAuthorizationFactory',
+            'MB\AuthorizationMiddleware' => 'Foo\Factories\AuthentificationFactory',
         ],
         .
         .
@@ -111,9 +111,9 @@ return [
         .
 ```
 
-### Step 3 - Create RestAuthentificationFactory 
+### Step 3 - Create AuthentificationFactory 
 
-Create RestAuthentificationFactory for injected IUserService
+Create AuthentificationFactory for injected IUserService
 
 ```
 <?php
@@ -123,9 +123,9 @@ use Interop\Container\ContainerInterface;
 use MB\AuthentificationMidleware;
 
 /**
- * Description of RestAuthentificationFactory
+ * Description of AuthentificationFactory
  */
-class RestAuthentificationFactory {
+class AuthentificationFactory {
     
     public function __invoke(ContainerInterface $container)
     {
