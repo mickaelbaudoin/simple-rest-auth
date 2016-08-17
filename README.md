@@ -1,4 +1,4 @@
-## synospis
+## Synospis
 Authentication API REST
 
 ## Code example
@@ -34,7 +34,9 @@ class UserEntity implements \MB\SimpleRestAuth\IUser{
         
     }
 }
+```
 
+```
 namespace Foo\Service;
 
 class UserService implements \MB\SimpleRestAuth\IUserService{
@@ -109,9 +111,9 @@ return [
         .
 ```
 
-### Step 3 - Create RestAuthorizationFactory 
+### Step 3 - Create RestAuthentificationFactory 
 
-Create RestAuthorizationFactory for injected IUserService
+Create RestAuthentificationFactory for injected IUserService
 
 ```
 <?php
